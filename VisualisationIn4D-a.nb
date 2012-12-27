@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     20438,        532]
-NotebookOptionsPosition[     18907,        473]
-NotebookOutlinePosition[     19263,        489]
-CellTagsIndexPosition[     19220,        486]
+NotebookDataLength[     21820,        565]
+NotebookOptionsPosition[     20251,        504]
+NotebookOutlinePosition[     20607,        520]
+CellTagsIndexPosition[     20564,        517]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -237,54 +237,66 @@ stacked in the direction of the w coordinate.  This animation shows one \
    3.5656231453146143`*^9, 3.56562315866577*^9}, 3.565623264630231*^9, {
    3.5656234192783337`*^9, 3.56562342267205*^9}}],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
- RowBox[{
-  RowBox[{"a2", "=", 
-   RowBox[{"Table", "[", 
-    RowBox[{
-     RowBox[{"Graphics3D", "[", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"Hue", "[", 
-          RowBox[{
-           FractionBox["5", "6"], "w"}], "]"}], ",", 
-         RowBox[{"Cuboid", "[", "]"}]}], "}"}], ",", 
-       RowBox[{"Lighting", "\[Rule]", "\"\<Neutral\>\""}]}], "]"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"w", ",", "0", ",", "1", ",", "0.005"}], "}"}]}], "]"}]}], 
-  ";"}]], "Input",
+ RowBox[{"a2", "=", 
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"Graphics3D", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Hue", "[", 
+         RowBox[{
+          FractionBox["5", "6"], "w"}], "]"}], ",", 
+        RowBox[{"Cuboid", "[", "]"}]}], "}"}], ",", 
+      RowBox[{"Lighting", "\[Rule]", "\"\<Neutral\>\""}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"w", ",", "0", ",", "1", ",", "0.005"}], "}"}]}], 
+   "]"}]}]], "Input",
  CellChangeTimes->{{3.565618348015974*^9, 3.565618358333438*^9}, {
   3.56561845549251*^9, 3.56561848418221*^9}, {3.565618630669139*^9, 
   3.5656187024212427`*^9}, {3.5656191022905817`*^9, 3.565619110447372*^9}, {
   3.56561918110036*^9, 3.5656192192460537`*^9}, {3.565619571501885*^9, 
   3.565619636280489*^9}, {3.565620194664152*^9, 3.565620251834334*^9}, {
   3.565620310584626*^9, 3.565620310743184*^9}, {3.565620350067841*^9, 
-  3.565620352236001*^9}}],
-
-Cell[CellGroupData[{
+  3.565620352236001*^9}, {3.5656249708370447`*^9, 3.5656249748918743`*^9}}],
 
 Cell[BoxData[
- RowBox[{"Export", "[", 
-  RowBox[{"\"\<animation02.avi\>\"", ",", "a2"}], "]"}]], "Input",
- CellChangeTimes->{{3.565619227022256*^9, 3.565619250071315*^9}, {
-  3.5656199711522007`*^9, 3.56562000400452*^9}, {3.565620259101575*^9, 
-  3.56562026536768*^9}}],
-
-Cell[BoxData["\<\"animation02.avi\"\>"], "Output",
- CellChangeTimes->{3.565619265939275*^9, 3.565619694226904*^9, 
-  3.56562000539884*^9, 3.565620272123074*^9, 3.565620320928166*^9, 
-  3.5656203732718143`*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"ExpandFileName", "[", "\"\<animation02.avi\>\"", "]"}]], "Input",
- NumberMarks->False],
-
-Cell[BoxData["\<\"/Users/rbri053/animation02.avi\"\>"], "Output",
- CellChangeTimes->{3.565619270078876*^9}]
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`w$$ = 0., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`w$$], 0, 1, 0.005}}, Typeset`size$$ = {
+    360., {193., 198.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`w$51510$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`w$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`w$$, $CellContext`w$51510$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Graphics3D[{
+         Hue[(5/6) $CellContext`w$$], 
+         Cuboid[]}, Lighting -> "Neutral"], 
+      "Specifications" :> {{$CellContext`w$$, 0, 1, 0.005}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {237., 242.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.56562497540821*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -468,6 +480,25 @@ Cell[BoxData[
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{3.5656243264201603`*^9, 3.565624411401988*^9}]
 }, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Video export commands", "Subtitle",
+ CellChangeTimes->{{3.565625045222715*^9, 3.565625080022566*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"\"\<solidHypercube.avi\>\"", ",", "a2"}], "]"}], 
+  "\[LineSeparator]"}]], "Input",
+ CellChangeTimes->{{3.565625072072596*^9, 3.565625072073834*^9}}],
+
+Cell[BoxData["\<\"solidHypercube.avi\"\>"], "Output",
+ CellChangeTimes->{3.565625096330647*^9}]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
@@ -507,30 +538,32 @@ Cell[7594, 187, 1660, 34, 496, "Output"]
 Cell[CellGroupData[{
 Cell[9303, 227, 106, 1, 51, "Subtitle"],
 Cell[9412, 230, 431, 7, 30, "Text"],
-Cell[9846, 239, 968, 23, 48, "Input"],
 Cell[CellGroupData[{
-Cell[10839, 266, 269, 5, 28, "Input"],
-Cell[11111, 273, 209, 3, 28, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[11357, 281, 110, 2, 28, "Input"],
-Cell[11470, 285, 107, 1, 28, "Output"]
+Cell[9868, 241, 993, 22, 48, "Input"],
+Cell[10864, 265, 1567, 33, 496, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11626, 292, 148, 2, 51, "Subtitle"],
-Cell[11777, 296, 956, 14, 87, "Text"],
+Cell[12480, 304, 148, 2, 51, "Subtitle"],
+Cell[12631, 308, 956, 14, 87, "Text"],
 Cell[CellGroupData[{
-Cell[12758, 314, 1088, 31, 48, "Input"],
-Cell[13849, 347, 1692, 34, 530, "Output"]
+Cell[13612, 326, 1088, 31, 48, "Input"],
+Cell[14703, 359, 1692, 34, 496, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[15590, 387, 93, 1, 51, "Subtitle"],
-Cell[15686, 390, 218, 5, 30, "Text"],
+Cell[16444, 399, 93, 1, 51, "Subtitle"],
+Cell[16540, 402, 218, 5, 30, "Text"],
 Cell[CellGroupData[{
-Cell[15929, 399, 1260, 33, 48, "Input"],
-Cell[17192, 434, 1675, 34, 496, "Output"]
+Cell[16783, 411, 1260, 33, 48, "Input"],
+Cell[18046, 446, 1675, 34, 496, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19770, 486, 107, 1, 51, "Subtitle"],
+Cell[CellGroupData[{
+Cell[19902, 491, 211, 5, 46, "Input"],
+Cell[20116, 498, 95, 1, 86, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
