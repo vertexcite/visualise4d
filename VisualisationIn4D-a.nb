@@ -1,0 +1,101 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2773,         92]
+NotebookOptionsPosition[      2304,         70]
+NotebookOutlinePosition[      2660,         86]
+CellTagsIndexPosition[      2617,         83]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"a2", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Graphics3D", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Hue", "[", 
+          RowBox[{
+           FractionBox["5", "6"], "w"}], "]"}], ",", 
+         RowBox[{"Cuboid", "[", "]"}]}], "}"}], ",", 
+       RowBox[{"Lighting", "\[Rule]", "\"\<Neutral\>\""}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"w", ",", "0", ",", "1", ",", "0.005"}], "}"}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.565618348015974*^9, 3.565618358333438*^9}, {
+  3.56561845549251*^9, 3.56561848418221*^9}, {3.565618630669139*^9, 
+  3.5656187024212427`*^9}, {3.5656191022905817`*^9, 3.565619110447372*^9}, {
+  3.56561918110036*^9, 3.5656192192460537`*^9}, {3.565619571501885*^9, 
+  3.565619636280489*^9}, {3.565620194664152*^9, 3.565620251834334*^9}, {
+  3.565620310584626*^9, 3.565620310743184*^9}, {3.565620350067841*^9, 
+  3.565620352236001*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<animation02.avi\>\"", ",", "a2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.565619227022256*^9, 3.565619250071315*^9}, {
+  3.5656199711522007`*^9, 3.56562000400452*^9}, {3.565620259101575*^9, 
+  3.56562026536768*^9}}],
+
+Cell[BoxData["\<\"animation02.avi\"\>"], "Output",
+ CellChangeTimes->{3.565619265939275*^9, 3.565619694226904*^9, 
+  3.56562000539884*^9, 3.565620272123074*^9, 3.565620320928166*^9, 
+  3.5656203732718143`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ExpandFileName", "[", "\"\<animation02.avi\>\"", "]"}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData["\<\"/Users/rbri053/animation02.avi\"\>"], "Output",
+ CellChangeTimes->{3.565619270078876*^9}]
+}, Open  ]]
+},
+WindowSize->{1440, 852},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 968, 23, 48, "Input"],
+Cell[CellGroupData[{
+Cell[1550, 47, 269, 5, 28, "Input"],
+Cell[1822, 54, 209, 3, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2068, 62, 110, 2, 28, "Input"],
+Cell[2181, 66, 107, 1, 28, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
