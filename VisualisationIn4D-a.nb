@@ -10,14 +10,233 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      2773,         92]
-NotebookOptionsPosition[      2304,         70]
-NotebookOutlinePosition[      2660,         86]
-CellTagsIndexPosition[      2617,         83]
+NotebookDataLength[     20438,        532]
+NotebookOptionsPosition[     18907,        473]
+NotebookOutlinePosition[     19263,        489]
+CellTagsIndexPosition[     19220,        486]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
+Cell["Visualising 4D", "Title",
+ CellChangeTimes->{{3.565622850702544*^9, 3.5656228591782103`*^9}}],
+
+Cell["\<\
+Although it is probably impossible for humans to truly perceive 4 spatial \
+dimensions, it is amazing how far you can get with a range of techniques.
+Each \[OpenCurlyDoubleQuote]slice\[CloseCurlyDoubleQuote] of a 4D object is a \
+3D object.  If you view each of the slices one after the other, one gets an \
+animation, usually of a smoothly changing 3D object.  
+Usually \[OpenCurlyDoubleQuote]w\[CloseCurlyDoubleQuote] is used for the 4th \
+spatial coordinate (where the usual 3D coordinates are x,y and z). So, this \
+slicing animation technique maps the w coordinate to time. But the problem is \
+that then you cannot animate movements of the 4D object itself.
+
+I prefer using colour to represent the w coordinate, ranging, for example, \
+from w=0, represented by red, to w=1 represented by magenta, with all the \
+intermediate w values represented by the hues inbetween red and magenta: red, \
+yellow, green, cyan, blue, magenta.  The range does not have to be from w=0 \
+to w=1, and may be different if suitable to a particular requirement.  This \
+is already a common technique used to represent 3D surface height on a 2D \
+geographical map.
+
+A key to getting this trick to work is to first mentally animate so that each \
+of the slices is visualised in the corresponding colour, i.e. mapping w to \
+both time and colour; and then to follow this with a mental aggregation of \
+all the slices, allowing the colours to mix where they overlap.  It is also \
+really useful to first do the trick for visualising say a 3D object projected \
+into a 2D plane with colour representing the z coordinate, or even a 2D \
+object projected into a 1D line, using colour to represent the y coordinate, \
+... or even a 1D object projected onto a 0D point, using colour to represent \
+the x coordinate.  This allows you to get a feel for how objects that you can \
+perceive are represented using the technique.\
+\>", "Text",
+ CellChangeTimes->{{3.565622940253883*^9, 3.565623064321447*^9}, {
+  3.565623096745675*^9, 3.565623364499145*^9}, {3.565623429803795*^9, 
+  3.565623814210312*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Practice: Solid 3D cube", "Subtitle",
+ CellChangeTimes->{{3.5656240167690477`*^9, 3.5656240246194487`*^9}}],
+
+Cell["\<\
+To practice, we start with a 3D object, a solid 3D cube.  The first animation \
+uses the z coordinate, i.e. shows the actual slices through the actual 3D \
+object, with each slice occupying its actual location in 3D space.\
+\>", "Text",
+ CellChangeTimes->{{3.565624033377046*^9, 3.565624116009625*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"a1a", "=", 
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"Graphics3D", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Hue", "[", 
+         RowBox[{
+          FractionBox["5", "6"], "z"}], "]"}], ",", 
+        RowBox[{"Cuboid", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0", ",", "z"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "1", ",", "z"}], "}"}]}], "]"}]}], "}"}], ",", 
+      RowBox[{"Lighting", "\[Rule]", "\"\<Neutral\>\""}], ",", 
+      RowBox[{"PlotRange", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", "0", ",", "1", ",", "0.005"}], "}"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.565622100189344*^9, 3.565622268870574*^9}, {
+   3.5656223020406713`*^9, 3.565622303200068*^9}, {3.565622461187121*^9, 
+   3.565622522799878*^9}, {3.565622580901143*^9, 3.5656226076109447`*^9}, {
+   3.565623848411372*^9, 3.565623904562046*^9}, 3.565623974052246*^9, {
+   3.565624203126532*^9, 3.5656242387277527`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`z$$ = 0., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`z$$], 0, 1, 0.005}}, Typeset`size$$ = {
+    360., {193., 198.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`z$50909$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`z$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`z$$, $CellContext`z$50909$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Graphics3D[{
+         Hue[(5/6) $CellContext`z$$], 
+         Cuboid[{0, 0, $CellContext`z$$}, {1, 1, $CellContext`z$$}]}, 
+        Lighting -> "Neutral", PlotRange -> {{0, 1}, {0, 1}, {0, 1}}], 
+      "Specifications" :> {{$CellContext`z$$, 0, 1, 0.005}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {237., 242.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.5656242452495527`*^9}]
+}, Open  ]],
+
+Cell["\<\
+The second animation volutarily sacrifices the use of the 3rd spatial \
+dimension, to demonstrate how it works with where only colour and time are \
+used to represent the 3rd spatial dimension.\
+\>", "Text",
+ CellChangeTimes->{{3.5656241250466146`*^9, 3.565624199098797*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"a1a", "=", 
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"Graphics3D", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Hue", "[", 
+         RowBox[{
+          FractionBox["5", "6"], "z"}], "]"}], ",", 
+        RowBox[{"Cuboid", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "1", ",", "0"}], "}"}]}], "]"}]}], "}"}], ",", 
+      RowBox[{"Lighting", "\[Rule]", "\"\<Neutral\>\""}], ",", 
+      RowBox[{"PlotRange", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", "0", ",", "1", ",", "0.005"}], "}"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.565624241193317*^9, 3.5656242686068563`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`z$$ = 0., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`z$$], 0, 1, 0.005}}, Typeset`size$$ = {
+    360., {193., 198.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`z$51033$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`z$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`z$$, $CellContext`z$51033$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Graphics3D[{
+         Hue[(5/6) $CellContext`z$$], 
+         Cuboid[{0, 0, 0}, {1, 1, 0}]}, Lighting -> "Neutral", 
+        PlotRange -> {{0, 1}, {0, 1}, {0, 1}}], 
+      "Specifications" :> {{$CellContext`z$$, 0, 1, 0.005}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {237., 242.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.565624255901828*^9, 3.565624269699519*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Solid 4D hypercube", "Subtitle",
+ CellChangeTimes->{{3.565622891547474*^9, 3.5656228966766367`*^9}}],
+
+Cell["\<\
+A solid hypercube can be thought of as a stack of solid 3D cubes.  They are \
+stacked in the direction of the w coordinate.  This animation shows one \
+\[OpenCurlyDoubleQuote]slice\[CloseCurlyDoubleQuote] at a time.  \
+\>", "Text",
+ CellChangeTimes->{{3.565622621697548*^9, 3.565622820355538*^9}, {
+   3.5656231453146143`*^9, 3.56562315866577*^9}, 3.565623264630231*^9, {
+   3.5656234192783337`*^9, 3.56562342267205*^9}}],
+
 Cell[BoxData[
  RowBox[{
   RowBox[{"a2", "=", 
@@ -67,6 +286,190 @@ Cell[BoxData[
 Cell[BoxData["\<\"/Users/rbri053/animation02.avi\"\>"], "Output",
  CellChangeTimes->{3.565619270078876*^9}]
 }, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\[OpenCurlyDoubleQuote]Diagonal slice\[CloseCurlyDoubleQuote]", \
+"Subtitle",
+ CellChangeTimes->{{3.565623393329246*^9, 3.56562340039592*^9}}],
+
+Cell["\<\
+This animation shows a diagonal slice through the 4D hypercube, satisfying \
+the equation w=z.  (The fact that w=z in this animation explains why it is \
+identical to the warm-up animation that we used at the start when we were \
+using colour for the z coordinate, but cheated and kept the spatial z \
+coordinate at the same time.) This time, however, we don\[CloseCurlyQuote]t \
+pile up all the slices on the xy plane, but instead, mentally, preserve their \
+locations in 3D, and after the animation is complete, visualise them \
+altogether.  In this case, since none of the planes \
+\[OpenCurlyDoubleQuote]collided\[CloseCurlyDoubleQuote] with any of the \
+others in 3D, the finished product is easy to visualise in 3D: it is just a \
+solid 3D cube, with colour on the bottome face being red, and top face being \
+magenta, and ranging through the hues inbetween.\
+\>", "Text",
+ CellChangeTimes->{{3.565624539828991*^9, 3.5656248015741034`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"a3a", "=", 
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"Graphics3D", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Hue", "[", 
+         RowBox[{
+          FractionBox["5", "6"], "w"}], "]"}], ",", 
+        RowBox[{"Cuboid", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0", ",", "w"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "1", ",", "w"}], "}"}]}], "]"}]}], "}"}], ",", 
+      RowBox[{"Lighting", "\[Rule]", "\"\<Neutral\>\""}], ",", 
+      RowBox[{"PlotRange", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"w", ",", "0", ",", "1", ",", "0.005"}], "}"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.565624422507883*^9, 3.5656244314328833`*^9}, {
+  3.565624509575824*^9, 3.565624515217926*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`w$$ = 0., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`w$$], 0, 1, 0.005}}, Typeset`size$$ = {
+    360., {193., 198.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`w$51333$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`w$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`w$$, $CellContext`w$51333$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Graphics3D[{
+         Hue[(5/6) $CellContext`w$$], 
+         Cuboid[{0, 0, $CellContext`w$$}, {1, 1, $CellContext`w$$}]}, 
+        Lighting -> "Neutral", PlotRange -> {{0, 1}, {0, 1}, {0, 1}}], 
+      "Specifications" :> {{$CellContext`w$$, 0, 1, 0.005}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {237., 242.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.5656244364463387`*^9, 3.5656245167377453`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Prism", "Subtitle",
+ CellChangeTimes->{{3.565624833390773*^9, 3.5656248342785673`*^9}}],
+
+Cell["\<\
+This animation shows a prism, half of the 4D solid hypercube, satisfying w<z.\
+\
+\>", "Text",
+ CellChangeTimes->{{3.5656243028316727`*^9, 3.565624310634458*^9}, {
+  3.565624352768744*^9, 3.5656243859844*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"a3b", "=", 
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"Graphics3D", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Hue", "[", 
+         RowBox[{
+          FractionBox["5", "6"], "w"}], "]"}], ",", 
+        RowBox[{"Cuboid", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "1", ",", "w"}], "}"}]}], "]"}]}], "}"}], ",", 
+      RowBox[{"Lighting", "\[Rule]", "\"\<Neutral\>\""}], ",", 
+      RowBox[{"PlotRange", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"w", ",", "0", ",", "1", ",", "0.005"}], "}"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.565622100189344*^9, 3.565622268870574*^9}, {
+   3.5656223020406713`*^9, 3.565622303200068*^9}, {3.565622461187121*^9, 
+   3.565622522799878*^9}, {3.565622580901143*^9, 3.5656226076109447`*^9}, {
+   3.5656243172314177`*^9, 3.565624325451166*^9}, 3.56562439583151*^9}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`w$$ = 0., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`w$$], 0, 1, 0.005}}, Typeset`size$$ = {
+    360., {193., 198.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`w$51196$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`w$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`w$$, $CellContext`w$51196$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Graphics3D[{
+         Hue[(5/6) $CellContext`w$$], 
+         Cuboid[{0, 0, 0}, {1, 1, $CellContext`w$$}]}, Lighting -> "Neutral", 
+        PlotRange -> {{0, 1}, {0, 1}, {0, 1}}], 
+      "Specifications" :> {{$CellContext`w$$, 0, 1, 0.005}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {237., 242.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.5656243264201603`*^9, 3.565624411401988*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
 },
 WindowSize->{1440, 852},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
@@ -85,14 +488,51 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 968, 23, 48, "Input"],
 Cell[CellGroupData[{
-Cell[1550, 47, 269, 5, 28, "Input"],
-Cell[1822, 54, 209, 3, 28, "Output"]
+Cell[579, 22, 99, 1, 92, "Title"],
+Cell[681, 25, 2086, 32, 258, "Text"],
+Cell[CellGroupData[{
+Cell[2792, 61, 113, 1, 51, "Subtitle"],
+Cell[2908, 64, 312, 5, 30, "Text"],
+Cell[CellGroupData[{
+Cell[3245, 73, 1311, 34, 48, "Input"],
+Cell[4559, 109, 1668, 34, 496, "Output"]
+}, Open  ]],
+Cell[6242, 146, 285, 5, 30, "Text"],
+Cell[CellGroupData[{
+Cell[6552, 155, 1039, 30, 48, "Input"],
+Cell[7594, 187, 1660, 34, 496, "Output"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2068, 62, 110, 2, 28, "Input"],
-Cell[2181, 66, 107, 1, 28, "Output"]
+Cell[9303, 227, 106, 1, 51, "Subtitle"],
+Cell[9412, 230, 431, 7, 30, "Text"],
+Cell[9846, 239, 968, 23, 48, "Input"],
+Cell[CellGroupData[{
+Cell[10839, 266, 269, 5, 28, "Input"],
+Cell[11111, 273, 209, 3, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11357, 281, 110, 2, 28, "Input"],
+Cell[11470, 285, 107, 1, 28, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11626, 292, 148, 2, 51, "Subtitle"],
+Cell[11777, 296, 956, 14, 87, "Text"],
+Cell[CellGroupData[{
+Cell[12758, 314, 1088, 31, 48, "Input"],
+Cell[13849, 347, 1692, 34, 530, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15590, 387, 93, 1, 51, "Subtitle"],
+Cell[15686, 390, 218, 5, 30, "Text"],
+Cell[CellGroupData[{
+Cell[15929, 399, 1260, 33, 48, "Input"],
+Cell[17192, 434, 1675, 34, 496, "Output"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }
 ]
