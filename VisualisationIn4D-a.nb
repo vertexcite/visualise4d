@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     26789,        701]
-NotebookOptionsPosition[     24876,        628]
-NotebookOutlinePosition[     25232,        644]
-CellTagsIndexPosition[     25189,        641]
+NotebookDataLength[     27331,        712]
+NotebookOptionsPosition[     25418,        639]
+NotebookOutlinePosition[     25774,        655]
+CellTagsIndexPosition[     25731,        652]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -519,13 +519,11 @@ Cell[TextData[{
  ".  Since it is hollow, it is the equivalent of a surface in 3D.  It\
 \[CloseCurlyQuote]s \[OpenCurlyDoubleQuote]tangent space\
 \[CloseCurlyDoubleQuote] is 3D. Here, the red to magenta range represents w \
-from -1 to 1: Todo: this is not complete yet, and would like to do the full \
-sphere, also, w range in animation is from 0 to 1, need to fix so that it is \
 from -1 to 1."
 }], "Text",
  CellChangeTimes->{{3.565626197378293*^9, 3.565626323832735*^9}, {
   3.5656263677778473`*^9, 3.5656263842005997`*^9}, {3.565626428608737*^9, 
-  3.5656264673639507`*^9}}],
+  3.5656264673639507`*^9}, {3.5658221210093*^9, 3.565822124352326*^9}}],
 
 Cell[CellGroupData[{
 
@@ -539,12 +537,16 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"Hue", "[", 
          RowBox[{
-          FractionBox["5", "12"], "w"}], "]"}], ",", 
+          FractionBox["5", "12"], 
+          RowBox[{"(", 
+           RowBox[{"w", "+", "1"}], ")"}]}], "]"}], ",", 
         RowBox[{"Sphere", "[", 
          RowBox[{
           RowBox[{"{", 
-           RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", "w"}], "]"}]}], 
-       "}"}], ",", 
+           RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+          SqrtBox[
+           RowBox[{"1", "-", 
+            SuperscriptBox["w", "2"]}]]}], "]"}]}], "}"}], ",", 
       RowBox[{"Lighting", "\[Rule]", "\"\<Neutral\>\""}], ",", 
       RowBox[{"PlotRange", "\[Rule]", 
        RowBox[{"{", 
@@ -559,39 +561,46 @@ Cell[BoxData[
           RowBox[{
            RowBox[{"-", "1"}], ",", "1"}], "}"}]}], "}"}]}]}], "]"}], ",", 
     RowBox[{"{", 
-     RowBox[{"w", ",", "0", ",", "1", ",", "0.005"}], "}"}]}], 
-   "]"}]}]], "Input",
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"w", ",", "0"}], "}"}], ",", 
+      RowBox[{"-", "1"}], ",", "1", ",", "0.005"}], "}"}]}], "]"}]}]], "Input",\
+
  CellChangeTimes->{{3.565622100189344*^9, 3.565622268870574*^9}, {
    3.5656223020406713`*^9, 3.565622303200068*^9}, {3.565622461187121*^9, 
    3.565622522799878*^9}, {3.565622580901143*^9, 3.5656226076109447`*^9}, {
    3.5656243172314177`*^9, 3.565624325451166*^9}, 3.56562439583151*^9, {
    3.565626062905946*^9, 3.565626150307393*^9}, {3.565626396696229*^9, 
-   3.565626423671432*^9}}],
+   3.565626423671432*^9}, {3.565821508704164*^9, 3.565821514912155*^9}, {
+   3.5658215507432528`*^9, 3.565821578884802*^9}, {3.5658217803055887`*^9, 
+   3.565821792239525*^9}, {3.5658218319555187`*^9, 3.565821834428187*^9}, {
+   3.565821892262323*^9, 3.565821935717554*^9}, {3.565821967261683*^9, 
+   3.565822017251041*^9}}],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`w$$ = 1., Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`w$$ = 0.645, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{
-      Hold[$CellContext`w$$], 0, 1, 0.005}}, Typeset`size$$ = {
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`w$$], 0}, -1, 1, 0.005}}, Typeset`size$$ = {
     360., {193., 198.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`w$55654$$ = 0}, 
+    Typeset`skipInitDone$$ = True, $CellContext`w$80558$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`w$$ = 0}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`w$$, $CellContext`w$55654$$, 0]}, 
+        Hold[$CellContext`w$$, $CellContext`w$80558$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
          Typeset`skipInitDone$$}, "Body" :> Graphics3D[{
-         Hue[(5/12) $CellContext`w$$], 
-         Sphere[{0, 0, 0}, $CellContext`w$$]}, Lighting -> "Neutral", 
-        PlotRange -> {{-1, 1}, {-1, 1}, {-1, 1}}], 
-      "Specifications" :> {{$CellContext`w$$, 0, 1, 0.005}}, "Options" :> {}, 
-      "DefaultOptions" :> {}],
+         Hue[(5/12) ($CellContext`w$$ + 1)], 
+         Sphere[{0, 0, 0}, (1 - $CellContext`w$$^2)^Rational[1, 2]]}, 
+        Lighting -> "Neutral", PlotRange -> {{-1, 1}, {-1, 1}, {-1, 1}}], 
+      "Specifications" :> {{{$CellContext`w$$, 0}, -1, 1, 0.005}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
      ImageSizeCache->{405., {237., 242.}},
      SingleEvaluation->True],
     Deinitialization:>None,
@@ -602,7 +611,9 @@ Cell[BoxData[
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{{3.565626078344211*^9, 3.56562615186891*^9}}]
+ CellChangeTimes->{{3.565626078344211*^9, 3.56562615186891*^9}, 
+   3.565626493759109*^9, 3.565821798304043*^9, 3.565821835459778*^9, 
+   3.565822058843709*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -689,17 +700,17 @@ Cell[18708, 469, 1675, 34, 496, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[20432, 509, 99, 1, 51, "Subtitle"],
-Cell[20534, 512, 737, 15, 51, "Text"],
+Cell[20534, 512, 624, 13, 32, "Text"],
 Cell[CellGroupData[{
-Cell[21296, 531, 1377, 37, 47, "Input"],
-Cell[22676, 570, 1670, 34, 496, "Output"]
+Cell[21183, 529, 1891, 48, 48, "Input"],
+Cell[23077, 579, 1811, 36, 496, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[24395, 610, 107, 1, 51, "Subtitle"],
+Cell[24937, 621, 107, 1, 51, "Subtitle"],
 Cell[CellGroupData[{
-Cell[24527, 615, 211, 5, 46, "Input"],
-Cell[24741, 622, 95, 1, 28, "Output"]
+Cell[25069, 626, 211, 5, 46, "Input"],
+Cell[25283, 633, 95, 1, 28, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
