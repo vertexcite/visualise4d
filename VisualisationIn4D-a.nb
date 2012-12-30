@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     27331,        712]
-NotebookOptionsPosition[     25418,        639]
-NotebookOutlinePosition[     25774,        655]
-CellTagsIndexPosition[     25731,        652]
+NotebookDataLength[     28064,        722]
+NotebookOptionsPosition[     26149,        649]
+NotebookOutlinePosition[     26505,        665]
+CellTagsIndexPosition[     26462,        662]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -105,22 +105,23 @@ Cell[BoxData[
    3.5656223020406713`*^9, 3.565622303200068*^9}, {3.565622461187121*^9, 
    3.565622522799878*^9}, {3.565622580901143*^9, 3.5656226076109447`*^9}, {
    3.565623848411372*^9, 3.565623904562046*^9}, 3.565623974052246*^9, {
-   3.565624203126532*^9, 3.5656242387277527`*^9}}],
+   3.565624203126532*^9, 3.5656242387277527`*^9}, {3.565822790097589*^9, 
+   3.565822791057354*^9}, {3.565822833725566*^9, 3.565822836891526*^9}}],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`z$$ = 0., Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`z$$ = 0, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`z$$], 0, 1, 0.005}}, Typeset`size$$ = {
     360., {193., 198.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`z$50909$$ = 0}, 
+    Typeset`skipInitDone$$ = True, $CellContext`z$80749$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`z$$ = 0}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`z$$, $CellContext`z$50909$$, 0]}, 
+        Hold[$CellContext`z$$, $CellContext`z$80749$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -141,7 +142,8 @@ Cell[BoxData[
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.5656242452495527`*^9}]
+ CellChangeTimes->{3.5656242452495527`*^9, 3.565822793380349*^9, 
+  3.5658228415195427`*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -188,7 +190,7 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`z$$ = 0., Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`z$$ = 1., Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
@@ -266,8 +268,8 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`w$$ = 0., Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+   DynamicModuleBox[{$CellContext`w$$ = 0.9450000000000001, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`w$$], 0, 1, 0.005}}, Typeset`size$$ = {
@@ -470,7 +472,7 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`w$$ = 0., Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`w$$ = 1., Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
@@ -511,19 +513,27 @@ Cell["4D sphere", "Subtitle",
  CellChangeTimes->{{3.5656264866366796`*^9, 3.5656264897488537`*^9}}],
 
 Cell[TextData[{
- "This is half of a hollow sphere in 4D, known as ",
+ "This animation shows \[OpenCurlyDoubleQuote]slices\[CloseCurlyDoubleQuote] \
+of a hollow hypersphere (that is the boundary of in 4D solid ball), formally \
+known as ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox["S", "3"], TraditionalForm]],
   FormatType->"TraditionalForm"],
- ".  Since it is hollow, it is the equivalent of a surface in 3D.  It\
-\[CloseCurlyQuote]s \[OpenCurlyDoubleQuote]tangent space\
-\[CloseCurlyDoubleQuote] is 3D. Here, the red to magenta range represents w \
-from -1 to 1."
+ ". Each slice is a normal everyday hollow sphere. Here, the red to magenta \
+range represents w from -1 to 1.  You need to mentally \
+\[OpenCurlyDoubleQuote]collect\[CloseCurlyDoubleQuote] all the slices \
+together to visualise the final hypersphere.\nThis is exactly the same \
+animation that represents a solid 4D ball, if you think of each \
+\[OpenCurlyDoubleQuote]slice\[CloseCurlyDoubleQuote] as a solid 3D ball."
 }], "Text",
  CellChangeTimes->{{3.565626197378293*^9, 3.565626323832735*^9}, {
   3.5656263677778473`*^9, 3.5656263842005997`*^9}, {3.565626428608737*^9, 
-  3.5656264673639507`*^9}, {3.5658221210093*^9, 3.565822124352326*^9}}],
+  3.5656264673639507`*^9}, {3.5658221210093*^9, 3.565822124352326*^9}, {
+  3.56582267165444*^9, 3.56582269594444*^9}, {3.565823443010356*^9, 
+  3.565823461210264*^9}, {3.565823540933938*^9, 3.565823541309713*^9}, {
+  3.565823620837304*^9, 3.565823637885041*^9}, {3.565823672784433*^9, 
+  3.5658238055055943`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -580,8 +590,8 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`w$$ = 0.645, Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+   DynamicModuleBox[{$CellContext`w$$ = -0.8049999999999999, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
        Hold[$CellContext`w$$], 0}, -1, 1, 0.005}}, Typeset`size$$ = {
@@ -661,56 +671,56 @@ Cell[CellGroupData[{
 Cell[2792, 61, 113, 1, 51, "Subtitle"],
 Cell[2908, 64, 312, 5, 30, "Text"],
 Cell[CellGroupData[{
-Cell[3245, 73, 1311, 34, 48, "Input"],
-Cell[4559, 109, 1668, 34, 496, "Output"]
+Cell[3245, 73, 1407, 35, 48, "Input"],
+Cell[4655, 110, 1716, 35, 496, "Output"]
 }, Open  ]],
-Cell[6242, 146, 285, 5, 30, "Text"],
+Cell[6386, 148, 285, 5, 30, "Text"],
 Cell[CellGroupData[{
-Cell[6552, 155, 1039, 30, 48, "Input"],
-Cell[7594, 187, 1660, 34, 496, "Output"]
+Cell[6696, 157, 1039, 30, 48, "Input"],
+Cell[7738, 189, 1660, 34, 496, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9303, 227, 106, 1, 51, "Subtitle"],
-Cell[9412, 230, 431, 7, 30, "Text"],
+Cell[9447, 229, 106, 1, 51, "Subtitle"],
+Cell[9556, 232, 431, 7, 30, "Text"],
 Cell[CellGroupData[{
-Cell[9868, 241, 993, 22, 48, "Input"],
-Cell[10864, 265, 1567, 33, 496, "Output"]
+Cell[10012, 243, 993, 22, 48, "Input"],
+Cell[11008, 267, 1583, 33, 496, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12480, 304, 148, 2, 51, "Subtitle"],
-Cell[12631, 308, 956, 14, 87, "Text"],
+Cell[12640, 306, 148, 2, 51, "Subtitle"],
+Cell[12791, 310, 956, 14, 87, "Text"],
 Cell[CellGroupData[{
-Cell[13612, 326, 1088, 31, 48, "Input"],
-Cell[14703, 359, 1692, 34, 496, "Output"]
+Cell[13772, 328, 1088, 31, 48, "Input"],
+Cell[14863, 361, 1692, 34, 496, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[16432, 398, 416, 12, 28, "Input"],
-Cell[16851, 412, 206, 4, 307, "Output"]
+Cell[16592, 400, 416, 12, 28, "Input"],
+Cell[17011, 414, 206, 4, 307, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[17106, 422, 93, 1, 51, "Subtitle"],
-Cell[17202, 425, 218, 5, 30, "Text"],
+Cell[17266, 424, 93, 1, 51, "Subtitle"],
+Cell[17362, 427, 218, 5, 30, "Text"],
 Cell[CellGroupData[{
-Cell[17445, 434, 1260, 33, 48, "Input"],
-Cell[18708, 469, 1675, 34, 496, "Output"]
+Cell[17605, 436, 1260, 33, 48, "Input"],
+Cell[18868, 471, 1675, 34, 496, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[20432, 509, 99, 1, 51, "Subtitle"],
-Cell[20534, 512, 624, 13, 32, "Text"],
+Cell[20592, 511, 99, 1, 51, "Subtitle"],
+Cell[20694, 514, 1181, 21, 70, "Text"],
 Cell[CellGroupData[{
-Cell[21183, 529, 1891, 48, 48, "Input"],
-Cell[23077, 579, 1811, 36, 496, "Output"]
+Cell[21900, 539, 1891, 48, 48, "Input"],
+Cell[23794, 589, 1825, 36, 496, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[24937, 621, 107, 1, 51, "Subtitle"],
+Cell[25668, 631, 107, 1, 51, "Subtitle"],
 Cell[CellGroupData[{
-Cell[25069, 626, 211, 5, 46, "Input"],
-Cell[25283, 633, 95, 1, 28, "Output"]
+Cell[25800, 636, 211, 5, 46, "Input"],
+Cell[26014, 643, 95, 1, 28, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
